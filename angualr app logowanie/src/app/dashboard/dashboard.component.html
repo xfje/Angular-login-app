@@ -1,0 +1,13 @@
+<div *ngIf="authService.isAuthenticated()">
+    <p>Welcome to the Dashboard!</p>
+    <a routerLink="/profile">Profile</a>
+    <a routerLink="/settings">Settings</a>
+    <button (click)="logout()">Logout</button>
+  </div>
+  
+  <div *ngIf="!authService.isAuthenticated()">
+    <p>You need to login to access the dashboard.</p>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+  </div>
+  
